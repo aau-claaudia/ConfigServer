@@ -6,10 +6,15 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/aau-claaudia/config
-          username: frixdk
-          password: 9ddd15ac92b2251aba5a9462c60b9ddd64c102ba
+          uri: git@github.com:aau-claaudia/config.git
           defaultLabel: main
+          ignoreLocalSshSettings: true
+          privateKey: |
+            -----BEGIN RSA PRIVATE KEY-----
+            MIIJKgIBAAKCAgEA6g1TRNMeNnSPRVxI7wQgqUhYdNyZhrDwO963jg4IJKSJKhjK
+            DENNENØGLEERGÅETISTYKKERSÅDUKANIKKEBRUGEDENTILNOGETSOMHELSTALTSÅ
+            Sc43HMlu7nXMD41SZdh/1J70Jzz0ljVB2MGA4WaC8tPrKqtNJaNGS+ir7QDH/w==
+            -----END RSA PRIVATE KEY-----
 
 logging:
   level:
