@@ -11,5 +11,6 @@ RUN gradle build
 FROM openjdk:15-jdk-alpine
 
 COPY --from=build /home/gradle/build/libs/gradle-0.0.1-SNAPSHOT.jar app.jar
+COPY "known_hosts" "/root/.ssh/known_hosts"
 
 ENTRYPOINT ["java","-jar","/app.jar"]
