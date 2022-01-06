@@ -1,0 +1,20 @@
+@startuml
+!theme cerulean-outline
+title System overview
+
+left to right direction
+
+folder AzureVM {
+  agent OpenStackGateway as osg
+  agent OpenStackGatewayTest as osgt
+  agent ConfigServer as config
+}
+
+node Github as github
+
+osg --[thickness=2]> config
+osgt --[thickness=2]> config
+
+config <--[thickness=2] github
+
+@enduml
